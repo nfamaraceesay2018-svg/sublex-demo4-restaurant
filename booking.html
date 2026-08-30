@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking a table | Yassa House</title>
+<meta name="description" content="How to book at Yassa House: call or WhatsApp +220 738 4410, tables held for 20 minutes, groups of eight or more need 24 hours notice.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14100e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Booking a table | Yassa House">
+<meta property="og:description" content="How to book at Yassa House: call or WhatsApp +220 738 4410, tables held for 20 minutes, groups of eight or more need 24 hours notice.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1610514000782-b205b70fbe71?auto=format&fit=crop&w=1400&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23d94f2b%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2243%22%20font-family%3D%22Helvetica%2CArial%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3EYH%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility}
+/* height:auto matters. The width and height attributes on an img map to CSS
+   presentational hints, so without this the attribute height wins and every
+   aspect-ratio is ignored. The clinic hero was rendering 1866px tall at every
+   screen size because of it. */
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+button{font:inherit}
+main{flex:1}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:99;background:#fff;color:#000;padding:10px 16px}
+
+:root{
+  --dark:#14100e; --deep:#0d0a09; --panel:#1d1815; --cream:#f6efe3;
+  --soft:#a9998a; --rule:rgba(246,239,227,.16); --chilli:#d94f2b; --gold:#e2ae56;
+}
+body{background:var(--dark);color:var(--cream);font-family:"Inter",system-ui,sans-serif;
+  font-size:17px;line-height:1.75;
+  background-image:radial-gradient(circle at 50% 0%,rgba(217,79,43,.12),transparent 55%)}
+h1,h2,h3,.word,.price{font-family:"Archivo",system-ui,sans-serif;font-weight:800;
+  letter-spacing:-.02em;line-height:1.08}
+.mid{max-width:760px;margin:0 auto;padding:0 26px}
+.wide{max-width:1080px;margin:0 auto;padding:0 26px}
+
+header.top{padding:34px 0 0;text-align:center}
+.word{display:inline-block;font-size:30px;text-decoration:none;letter-spacing:.02em}
+.word span{color:var(--chilli)}
+header.top .sub{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--soft);
+  margin-top:9px}
+nav.centre{margin-top:24px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  position:sticky;top:0;background:rgba(20,16,14,.94);backdrop-filter:blur(8px);z-index:20}
+nav.centre .wide{display:flex;justify-content:center;gap:0;flex-wrap:wrap}
+nav.centre a{padding:15px 22px;text-decoration:none;color:var(--soft);font-size:13px;
+  letter-spacing:.19em;text-transform:uppercase}
+nav.centre a:hover{color:var(--cream)}
+nav.centre a[aria-current]{color:var(--gold)}
+
+section{padding:64px 0}
+.hero{padding-top:56px;text-align:center}
+.hero h1{font-size:clamp(38px,6.4vw,74px);text-wrap:balance}
+.hero p.stand{margin-top:20px;font-size:19.5px;color:var(--soft);max-width:52ch;
+  margin-left:auto;margin-right:auto}
+figure.plate{margin-top:44px}
+figure.plate img{width:100%;aspect-ratio:21/9;object-fit:cover}
+figure.plate figcaption{font-size:13px;color:var(--soft);margin-top:12px;text-align:center;
+  letter-spacing:.05em}
+
+h2{font-size:clamp(24px,3.2vw,34px);text-align:center;text-wrap:balance}
+.rule-head{text-align:center;margin-bottom:30px}
+.rule-head span{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+  display:inline-block;padding:0 16px;position:relative}
+.rule-head span::before,.rule-head span::after{content:"";position:absolute;top:50%;width:34px;
+  height:1px;background:var(--rule)}
+.rule-head span::before{right:100%}
+.rule-head span::after{left:100%}
+p{margin-bottom:17px;color:var(--soft)}
+p strong{color:var(--cream);font-weight:600}
+.mid p{text-align:center}
+.mid p.left,.left p{text-align:left}
+
+/* the signature: a printed menu line with leader dots */
+.menu{margin-top:26px}
+.menu .item{display:flex;align-items:baseline;gap:8px;padding:15px 0}
+.menu .item + .item{border-top:1px solid rgba(246,239,227,.07)}
+.menu .name{font-weight:600;color:var(--cream);white-space:nowrap}
+.menu .dots{flex:1;border-bottom:1px dotted rgba(246,239,227,.34);transform:translateY(-4px);
+  min-width:20px}
+.menu .price{color:var(--gold);font-size:17px;white-space:nowrap}
+.menu .note{font-size:14.5px;color:var(--soft);margin:-9px 0 0;text-align:left}
+.menu .vg{color:var(--chilli);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  margin-left:8px;white-space:nowrap}
+
+.hours{border-top:1px solid var(--rule);margin-top:30px}
+.hours div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;
+  border-bottom:1px solid var(--rule)}
+.hours dt{font-weight:600}
+.hours dd{color:var(--soft);text-align:right}
+
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--rule);border:1px solid var(--rule);margin-top:34px}
+.tiles div{background:var(--dark);padding:26px 24px}
+.tiles h3{font-size:17px;margin-bottom:9px}
+.tiles p{font-size:15px;text-align:left;margin:0}
+
+.call{background:var(--panel);border:1px solid var(--rule);padding:34px;text-align:center;margin-top:34px}
+.call a.tel{display:inline-block;font-family:"Archivo",sans-serif;font-size:30px;font-weight:800;
+  color:var(--gold);text-decoration:none;margin:8px 0 6px}
+.call p{margin:0;font-size:15px}
+
+.qa{margin-top:26px}
+.qa details{border-bottom:1px solid var(--rule)}
+.qa summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:600;font-size:17.5px;
+  display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--chilli);font-size:22px}
+.qa details[open] summary::after{content:"\2013"}
+.qa .a{padding-bottom:20px}
+.qa .a p{text-align:left;margin-bottom:12px}
+.qa .a p:last-child{margin-bottom:0}
+
+
+.sublex-footer{background:var(--deep);color:var(--cream);border-top:1px solid var(--rule);padding:64px 0 30px;margin-top:auto}
+.sf-inner{max-width:1180px;margin:0 auto;padding:0 30px;display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1.4fr;gap:40px;align-items:start}
+.sf-brand{display:flex;flex-direction:column;gap:12px;min-width:0}
+.sf-mark{width:40px;height:40px;border-radius:4px;background:var(--chilli);color:#fff;
+  display:grid;place-items:center;font-weight:700;font-size:15px;letter-spacing:.02em}
+.sf-name{font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.04em}
+.sublex-footer address{font-style:normal;color:var(--soft);font-size:15px;line-height:1.7}
+.sf-col h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);
+  margin-bottom:14px;font-weight:700}
+/* break-word rather than anywhere, so an email address wraps at a sensible
+   point instead of splitting one character onto its own line. */
+.sf-col a{display:block;color:var(--soft);text-decoration:none;font-size:15px;line-height:1.9;
+  overflow-wrap:break-word;padding:3px 0}
+.sf-col a:hover{color:var(--cream)}
+.sf-note p{color:var(--soft);font-size:15px;line-height:1.6}
+.sf-base{max-width:1180px;margin:38px auto 0;padding:22px 30px 0;border-top:1px solid var(--rule);
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--soft)}
+.sf-base a{color:var(--chilli);font-weight:600;text-decoration:none}
+@media(max-width:900px){.sf-inner{grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:560px){.sf-inner{grid-template-columns:1fr}.sublex-footer{padding:44px 0 26px}}
+
+
+::selection{background:#d94f2b;color:#fff}
+a,button,summary{transition:color .18s ease,background-color .18s ease,border-color .18s ease,opacity .18s ease}
+:focus-visible{outline:3px solid #d94f2b;outline-offset:3px;border-radius:2px}
+summary:focus-visible{outline-offset:-3px}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;scroll-behavior:auto !important}
+  html{scroll-behavior:auto}
+}
+@media(max-width:860px){
+  /* Fingers, not a mouse. Nothing interactive smaller than 44px of height. */
+  /* Not every footer link: the credit line has a link mid sentence, and
+     making that a flex block pushed the full stop onto its own line. */
+  nav a,.sf-col a,summary{min-height:44px;display:flex;align-items:center}
+  .sf-base{display:block}
+  .sf-base span{display:block;margin-bottom:6px}
+}
+@media print{
+  .sublex-footer,nav,.skip,button,[class*="cta"]{display:none !important}
+  body{background:#fff !important;color:#000 !important;font-size:11pt}
+  *{box-shadow:none !important}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;color:#555}
+  h1,h2,h3{break-after:avoid}
+  table,.fees,.sched,.prospectus,.menu{break-inside:avoid}
+}
+
+
+@media(max-width:860px){.word{padding:6px 0}}
+@media(max-width:640px){
+  nav.centre a{padding:12px 13px;font-size:12px;letter-spacing:.12em}
+  .tiles{grid-template-columns:1fr}
+  section{padding:44px 0}
+  figure.plate img{aspect-ratio:4/3}
+  .menu .item{flex-wrap:wrap}
+  .menu .name{white-space:normal}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Yassa House","description":"A 45 seat West African kitchen off the Senegambia strip in Kololi.","url":"https://demo4.sublexchat.com/","telephone":"+220 738 4410","email":"eat@yassahouse.gm","priceRange":"D150 to D950","image":"https://images.unsplash.com/photo-1763048443535-1243379234e2?auto=format&fit=crop&w=1800&q=80","address":{"@type":"PostalAddress","streetAddress":"Off Senegambia Strip","addressLocality":"Kololi","addressCountry":"GM"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"18:00","closes":"23:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"18:00","closes":"00:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"13:00","closes":"22:00"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="word" href="index.html">YASSA <span>HOUSE</span></a>
+  <p class="sub">West African kitchen &middot; Kololi</p>
+</header>
+<nav class="centre"><div class="wide">
+  <a href="index.html">Home</a><a href="menu.html">The menu</a><a href="booking.html" aria-current="page">Booking</a><a href="finding-us.html">Finding us</a><a href="questions.html">Questions</a>
+</div></nav>
+<main id="main">
+<section class="hero" style="padding-bottom:0"><div class="mid">
+  <h1>Booking a table</h1>
+  <p class="stand">One number, answered by a person. We hold a booked table for twenty minutes, and from eight o'clock on a Friday there is always somebody waiting for it.</p>
+</div></section>
+
+<section><div class="mid">
+  <div class="call">
+    <p style="color:var(--soft);font-size:12px;letter-spacing:.24em;text-transform:uppercase">Call or WhatsApp</p>
+    <a class="tel" href="tel:+2207384410">+220 738 4410</a>
+    <p>Answered 10:00 to 21:00. During service, a WhatsApp message gets a faster reply than the phone.</p>
+  </div>
+
+  <div class="rule-head" style="margin-top:52px"><span>How it works</span></div>
+  <p class="left"><strong>Up to seven people</strong> can book normally, on the day if there is space. Tuesday, Wednesday and Sunday there almost always is. Thursday to Saturday, ring in the morning.</p>
+  <p class="left"><strong>Eight or more</strong> needs twenty four hours notice and a set menu, which we agree with you on the phone. It is three courses at D850 a head, and we will build it around what your group eats rather than handing you a fixed list.</p>
+  <p class="left"><strong>We hold a table for twenty minutes.</strong> After that it goes to whoever is waiting, because on a busy night there is a queue and holding an empty table for an hour is unfair to the people standing in it. Ring if you are running late and we will hold it as long as we can.</p>
+  <p class="left"><strong>The last kitchen order</strong> is forty five minutes before we close: 22:15 Tuesday to Thursday, 23:15 Friday and Saturday, 21:15 on Sunday.</p>
+</div></section>
+
+<section><div class="wide">
+  <div class="rule-head"><span>The whole room</span></div>
+  <div class="tiles">
+    <div><h3>Private hire</h3><p>All forty five seats, on a Sunday evening or a Monday, from D18,000 including a three course set menu. Two weeks notice.</p></div>
+    <div><h3>What that includes</h3><p>The room, the staff, the set menu and the music left to you. Drinks are charged on the night at normal prices.</p></div>
+    <div><h3>What it does not</h3><p>We have no separate function room, so a private hire means we are closed to everyone else. That is why it is a Sunday or a Monday.</p></div>
+    <div><h3>Deposit</h3><p>Half on booking, the rest on the night. If you cancel more than a week out the deposit comes back in full.</p></div>
+  </div>
+</div></section>
+
+<section><div class="mid">
+  <div class="rule-head"><span>Takeaway</span></div>
+  <p>Order by phone for collection. Same prices as the room, and the kitchen needs twenty five minutes.</p>
+  <p><strong>We do not deliver ourselves.</strong> Any of the riders working the Senegambia strip will collect an order from us and bring it to you, and they charge you directly. We would rather say that than pretend we run a delivery service.</p>
+</div></section>
+</main>
+<!-- ===============================================================
+     SHARED SUBLEX CHAT FOOTER. Identical on demo1 to demo5.
+     Only the business details and the page links change.
+     =============================================================== -->
+<footer class="sublex-footer">
+  <div class="sf-inner">
+    <div class="sf-brand">
+      <span class="sf-mark">YH</span>
+      <span class="sf-name">Yassa House</span>
+      <address>Off Senegambia Strip<br>Kololi<br>The Gambia</address>
+    </div>
+    <div class="sf-col">
+      <h4>Contact</h4>
+      <a href="tel:+2207384410">+220 738 4410</a>
+      <a href="mailto:eat@yassahouse.gm">eat@yassahouse.gm</a>
+    </div>
+    <nav class="sf-col" aria-label="Footer">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a><a href="menu.html">The menu</a><a href="booking.html">Booking</a><a href="finding-us.html">Finding us</a><a href="questions.html">Questions</a>
+    </nav>
+    <div class="sf-col sf-note">
+      <h4>Ask us anything</h4>
+      <p>We answer WhatsApp faster than the telephone during service. The assistant here answers from the same menu and the same hours.</p>
+    </div>
+  </div>
+  <div class="sf-base">
+    <span>&copy; 2026 Yassa House. Demonstration site.</span>
+    <span>Answers on this site come from <a href="https://sublexchat.com">Sublex&nbsp;Chat</a>.</span>
+  </div>
+</footer>
+
+<!-- Sublex Chat. One line, the last thing before </body>, on every page.
+     Replace PUBLIC_KEY with this assistant's key from the dashboard,
+     under Assistants then Channels. -->
+<script src="https://sublexchat.com/widget/v1/loader.js" data-key="PUBLIC_KEY" async></script>
+
+</body>
+</html>
